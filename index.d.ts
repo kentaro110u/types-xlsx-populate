@@ -141,6 +141,7 @@ declare namespace XlsxPopulate {
     value(): string | boolean | number | Date | undefined
     value(value: string | boolean | number | null | undefined): Cell
     value(): Range
+    value(): RichText
     workbook(): Workbook
     addHorizontalPageBreak(): Cell
   }
@@ -214,6 +215,10 @@ declare namespace XlsxPopulate {
     list: any[]
     add(id: number): PageBreaks
     remove(index: number): PageBreaks
+  }
+
+  class RichText {
+    text(): string
   }
 
   class Color {
